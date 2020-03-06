@@ -1,0 +1,23 @@
+{
+  "name": "osmgo-grenoble-2020-03-09",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @marp-team/marp-cli slide.md -o docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoFabien/osmgo-grenoble-2020-03-09.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoFabien/osmgo-grenoble-2020-03-09/issues"
+  },
+  "homepage": "https://github.com/DoFabien/osmgo-grenoble-2020-03-09#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.17.2"
+  }
+}

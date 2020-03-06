@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title> Osm Demo</title>
+
+
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.16.0/parser.min.js"></script>
+		<script src="assets/osmtogeojson.js"></script>
+		
+		
+		
+	</head>
+	<body>
+		<div id="map" style="position:absolute; top:0; bottom: 0; left: 0; right: 30%;"></div>
+		<div id="menu" style="position:absolute; top:0; bottom: 0; width: 30%; right: 0;">
+			<button onclick="diplayRawOSMData()"> Dessiner sur la carte </button>
+
+			<span id="selectedId"></span>
+
+			<div id="login">
+				<div><input type="text" id="user" name="user" required></div>
+				<div> <input type="password" id="password" name="password" required> </div>
+				<button onclick="osmUserDetail()"> Connexion </button>
+			</div>
+		
+
+			<div id="divChangeset" style="display: none;">
+				<button onclick="osmGetChangeset(true)"> get changeset</button> 
+			<button onclick="osmCreateChangeset()"> create changeset</button> 
+			ChangesetId : <span id="changesetId"></span>
+			</div>
+			
+
+			<div id="divModif" style="display: none;">
+				<button onclick="osmCreateNode()"> Create node</button> 
+				<!-- <button onclick="osmGetNodeById()"> get node detail</button>  -->
+				
+				<div>
+					<button onclick="osmUpdateNode(true)">Add wheelchair=yes</button> 
+				</div>
+			
+				<div>
+					<button onclick="osmUpdateNode()">Update</button> 
+				</div>
+				
+				<div>
+					<button onclick="osmDeleteNode()"> Delete node</button> 
+				</div>
+				
+			</div>
+
+		
+			
+		</div>
+
+		
+<script src="assets/script.js" ></script>
+	</body>
+</html>
